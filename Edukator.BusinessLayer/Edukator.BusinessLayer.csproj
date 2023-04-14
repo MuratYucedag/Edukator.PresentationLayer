@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="Logging\" />
+    <Folder Include="Container\" />
+    <Folder Include="ErrorMessage\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+</Project>
