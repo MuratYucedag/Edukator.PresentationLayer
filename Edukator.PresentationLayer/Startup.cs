@@ -32,6 +32,12 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddScoped<ICategoryService, CategoryManager>();
 
+            services.AddScoped<ICourseDal, EfCourseDal>();
+            services.AddScoped<ICourseService, CourseManager>();
+
+            services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
+            services.AddScoped<ISocialMediaService, SocialMediaManager>();
+
             services.AddControllersWithViews();
         }
 

@@ -1,0 +1,28 @@
+﻿@model Edukator.EntityLayer.Concrete.SocialMedia
+
+@{
+    ViewData["Title"] = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Sosyal Medya Güncelleme Sayfası</h6>
+        <form method="post">
+            <input type="hidden" asp-for="SocialMediaId" />
+            <div class="mb-3">
+                <label for="socialmedianame" class="form-label">Sosyal Medya Başlığı</label>
+                <input type="text" class="form-control" id="socialmedianame" asp-for="SocialMediaName" />
+            </div>
+            <div class="mb-3">
+                <label for="socialmediicon" class="form-label">Sosyal Medya İkonu</label>
+                <input type="text" class="form-control" id="socialmediicon" asp-for="SocialMediaIcon" />
+            </div>
+            <div class="mb-3">
+                <label for="socialmediaurl" class="form-label">Sosyal Medya URL</label>
+                <input type="text" class="form-control" id="socialmediaurl" asp-for="SocialMediaUrl" />
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>
