@@ -1,26 +1,35 @@
 ﻿@model List<Edukator.EntityLayer.Concrete.Category>
 
 @{
-    Layout = null;
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-<div class="container">
-    <br />
-    <br />
-    <table class="table table-bordered">
-        <tr>
-            <th>#</th>
-            <th>Kategori Adı</th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.CategoryID</td>
-                <td>@item.CategoryName</td>
-            </tr>
-        }
-    </table>
-    <a href="#" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Kategori İşlemleri</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Kategori Adı</th>
+                    <th scope="col">Sil</th>
+                    <th scope="col">Güncelle</th>
+                    <th scope="col">Kurslar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.CategoryID</th>
+                        <td>@item.CategoryName</td>
+                        <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
+                        <td><a href="#" class="btn btn-outline-dark">Kurslar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Category/AddCategory/" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+    </div>
 </div>

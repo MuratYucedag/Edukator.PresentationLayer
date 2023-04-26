@@ -1,0 +1,41 @@
+﻿@model Edukator.EntityLayer.Concrete.Course
+
+@{
+    ViewData["Title"] = "UpdateCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Kurs Güncelleme Sayfası</h6>
+        <form method="post">
+            <input type="hidden" asp-for="CourseID" />
+            <div class="mb-3">
+                <label class="form-label">Kurs Başlığı</label>
+                <input type="text" class="form-control" asp-for="Title" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Görsel URL</label>
+                <input type="text" class="form-control" asp-for="ImageURL" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fiyat</label>
+                <input type="text" class="form-control" asp-for="Price" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Değerlendirme</label>
+                <input type="text" class="form-control" asp-for="Review" />
+            </div>
+            <div class="mb-3">
+                <label for="socialmediaurl" class="form-label">Kategori</label>
+                @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+            </div>
+            <div class="mb-3">
+                <label for="socialmediaurl" class="form-label">Açıklama</label>
+                <textarea class="form-control" rows="5" asp-for="Description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>
+
