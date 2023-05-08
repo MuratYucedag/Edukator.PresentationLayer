@@ -1,0 +1,41 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Feature>
+<section class="bannerw3l-hnyv">
+    @foreach(var item in Model)
+    {       
+    <div class="banner-layer">
+        <video autoplay muted loop id="myVideo">
+            <source src="@item.VideoUrl" type="video/mp4">
+            Tarayıcınız bu video formatını desteklememektedir.
+        </video>
+        <div class="main-content-top">
+            <div class="container">
+                <div class="main-content">
+                
+                    <h4>@item.Title1</h4>
+                    <h3>@item.Title2 <span class="inn-text"></span> </h3>
+                    <a href="about.html" class="btn btn-style transparant-btn mt-md-5 mt-4">Daha Fazlası</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    <div class="w3apply-admission">
+        <div class="apply-admission-wrap">
+            <div class="apply-admission-inner">
+                <h4 class="title text-center">
+                    <span>Hemen Kaydolunz</span>
+                </h4>
+                <div class="caption text-center mb-2">
+                    İşinizi Kolaylaştırın!
+                </div>
+                <div class="apply-form">
+                    <form action="#" class="" method="post">
+                        <input type="text" name="text" placeholder="Adınız" required="">
+                        <input type="email" name="email" placeholder="E-Mail Adresiniz" required="">
+                        <button class="btn btn-style btn-primary">Kayıt Ol</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

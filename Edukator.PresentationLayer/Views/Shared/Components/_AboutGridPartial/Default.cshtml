@@ -1,0 +1,20 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AboutGrid>
+
+<section class="w3l-bottom-grids-6 py-5" id="grids">
+    <div class="container py-md-5 py-2">
+        <div class="grids-area-hny row text-left pt-lg-5 mt-lg-5">
+            @foreach(var item in Model)
+            {
+            <div class="col-lg-4 col-md-6 grids-feature pr-lg-5">
+                <div class="area-box">
+                    <span class="@item.Icon"></span>
+                    <h4><a href="#feature" class="title-head">@item.Title</a></h4>
+                    <p>
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
