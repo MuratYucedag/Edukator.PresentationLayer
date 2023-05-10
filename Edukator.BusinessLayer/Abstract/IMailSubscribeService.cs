@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace Edukator.BusinessLayer.Abstract
 {
-    public interface ICourseService:IGenericService<Course>
+    public interface IMailSubscribeService : IGenericService<MailSubscribe>
     {
-        List<Course> TGetCoursesWithCategory();
-        List<Course> TGetCoursesWithCategories();
     }
 }

@@ -22,5 +22,6 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<AboutGrid> AboutGrids { get; set; }
+        public DbSet<MailSubscribe> MailSubscribes { get; set; }
     }
 }

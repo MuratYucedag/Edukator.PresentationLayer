@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace Edukator.DataAccessLayer.Abstract
 {
-    public interface ICourseDal : IGenericDal<Course>
+    public interface IMailSubscribeDal : IGenericDal<MailSubscribe>
     {
-        List<Course> GetCoursesWithCategory();
-        List<Course> GetCoursesWithCategories();
     }
 }
