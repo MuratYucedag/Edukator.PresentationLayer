@@ -1,0 +1,38 @@
+﻿@model List<Edukator.EntityLayer.Concrete.CourseRegister>
+
+    <div class="container-fluid pt-4 px-4">
+        <div class="bg-light text-center rounded p-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <h6 class="mb-0">Son Öğrenci Kurs Kayıtları</h6>
+                <a href="">Tümünü Göster</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                    <thead>
+                        <tr class="text-dark">
+                            <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                            <th scope="col">Kurs Adı</th>
+                            <th scope="col">Öğrenci Adı</th>
+                            <th scope="col">Kurs Fiyatı</th>
+                            <th scope="col">Durum</th>
+                            <th scope="col">Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                  @foreach (var item in Model)
+                  {
+
+                        <tr>
+                            <td><input class="form-check-input" type="checkbox"></td>
+                            <td>@item.Course.Title</td>
+                            <td>@item.AppUser.Name @item.AppUser.Surname</td>
+                            <td>@item.Course.Price ₺</td>
+                            <td>Aktif</td>
+                            <td><a class="btn btn-sm btn-primary" href="">Detaylar</a></td>
+                        </tr>
+                  }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
