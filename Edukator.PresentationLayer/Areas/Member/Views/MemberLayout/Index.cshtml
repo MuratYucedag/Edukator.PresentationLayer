@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("~/Views/AdminLayout/PartialHead.cshtml")
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+
+        @await Html.PartialAsync("~/Views/AdminLayout/PartialSpinner.cshtml")
+
+        @await Html.PartialAsync("MemberSideBarPartial.cshtml")
+
+        <div class="content">
+
+            @await Html.PartialAsync("~/Views/AdminLayout/PartialNavbar.cshtml")
+
+            <div class="container-fluid pt-4 px-4">
+                @RenderBody()
+            </div>
+
+            @await Html.PartialAsync("~/Views/AdminLayout/PartialFooter.cshtml")
+
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    @await Html.PartialAsync("~/Views/AdminLayout/PartialScript.cshtml")
+
+</body>
+</html>

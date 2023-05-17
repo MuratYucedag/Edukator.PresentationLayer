@@ -10,5 +10,6 @@ namespace Edukator.DataAccessLayer.Abstract
     public interface ICourseRegisterDal : IGenericDal<CourseRegister>
     {
         List<CourseRegister> CourseRegisterListWithCoursesAndUsers();
+        List<CourseRegister> CourseRegisterListWithCourseByUser(int id);
     }
 }
