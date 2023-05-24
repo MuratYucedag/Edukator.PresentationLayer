@@ -1,0 +1,16 @@
+﻿@model Edukator.EntityLayer.Concrete.AppRole
+
+@{
+    ViewData["Title"] = "UpdateRole";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Rol Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Rol Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <button class="btn btn-outline-success">Rolü Güncelle</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AppUser>
+
+@{
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Öğrenci Listesi</h6>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Şehir</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Name @item.Surname</td>
+                        <td>@item.City</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
